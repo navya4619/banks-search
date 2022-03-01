@@ -1,0 +1,29 @@
+ <style>
+    table, th, td {
+        text-align: center;
+      border:1px solid black;
+    }
+    </style>
+<table style="width:80%">
+<tr>
+  <th>ifsc</th>
+  <th>bank_id</th>
+  <th>branch</th>
+  <th>address</th>
+  <th>city</th>
+  <th>district</th>
+  <th>state</th>
+  <th>bank_name</th>
+</tr>
+<tr *ngFor="let detail of bankdetails | filter : searchText">
+    <td>{{detail.ifsc}}</td>
+    <td>{{detail.bank_id}}</td>
+    <td>{{detail.branch}}</td>
+    <td>{{detail.address}}</td>
+    <td>{{detail.city}}</td>
+    <td>{{detail.district}}</td>
+    <td>{{detail.state}}</td>
+    <td>{{detail.bank_name}}</td>
+
+</table>
+
